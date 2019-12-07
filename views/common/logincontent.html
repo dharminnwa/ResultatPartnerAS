@@ -1,0 +1,21 @@
+﻿<!-- Wrapper-->
+<div id="wrapper">
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="wrapper" class="{{$state.current.name}}">
+        <!-- Page wrapper -->
+        <div ng-include="'views/common/logintopnavbar.html'"></div>
+        <!-- Main view  -->
+        <div ui-view></div>
+    </div>
+    <!-- End page wrapper-->
+</div>
+<style type="text/css">
+    .login-container {
+        padding-top: 60px;
+    }
+    .login-box {
+        margin-top: 10%;
+    }
+</style>
+<!-- End wrapper-->

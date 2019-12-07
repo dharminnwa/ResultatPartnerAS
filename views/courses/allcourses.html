@@ -1,0 +1,23 @@
+﻿<div class="wrapper wrapper-content" ng-controller="courseCtrl">
+    <div class="row" ng-init="getAllCourse()">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Courses</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="col-lg-3 " ng-repeat="course in courseList" data-courseid="{{course.courseID }}">
+                        <div class="well">
+                            {{course.courseName}}
+                            <br>
+                            <small class="m-r">{{course.courseDescription}}</small>
+                            <br>
+                            <div class="btn btn-md btn-white m-t" ng-hide="userModel.isAdmin" ng-click="getCourseInfo(course.courseID)"><i class="fa fa-thumbs-up"></i>  Info </div>
+                            <div class="btn btn-md btn-default m-t" ng-show="userModel.isAdmin" ng-click="EditCourseInfo(course.courseID)"><i class="fa fa-thumbs-up"></i>  Edit </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

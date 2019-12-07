@@ -1,0 +1,25 @@
+﻿<div class="wrapper wrapper-content" ng-controller="courseCtrl">
+    <div class="row" ng-init="isParticipatedInCourse()">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Courses</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="col-lg-3">
+
+                        Course Name:   {{courseDetail.courseName}}
+                        <br>
+                        <small class="m-r">
+                            Description:  {{courseDetail.courseDescription}}
+                        </small>
+                        <br>
+
+                        <div class="btn btn-md btn-white m-t" ng-click="ParticipateInCourse(CourseID)"><i class="fa fa-thumbs-up"></i> {{ButtonText}}  </div>
+                        <div>{{RegisterMessage}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
